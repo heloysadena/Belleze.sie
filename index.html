@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BELLEZE | Elegância que permanece</title>
+
+    <meta
+        name="description"
+        content="BELLEZE - moda sofisticada, elegante e moderna."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================
+           CONFIGURAÇÕES GERAIS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #fffdfc;
+            color: #4d3d3b;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           CORES DA BELLEZE
+        ========================= */
+
+        :root {
+            --branco: #fffdfc;
+            --rosa: #f7d9dc;
+            --rosa-claro: #fcebed;
+            --dourado: #b78a3d;
+            --dourado-claro: #d8b56d;
+            --texto: #4d3d3b;
+            --cinza: #8d7773;
+        }
+
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================= */
+
+        .topo {
+            height: 28px;
+
+            background: var(--rosa);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #8a624d;
+
+            font-size: 9px;
+            letter-spacing: 3px;
+        }
+
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
+
+        header {
+            height: 95px;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 50px;
+
+            border-bottom: 1px solid #eee5e1;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 100;
+        }
+
+
+        /* MENU */
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #705c56;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dourado);
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            text-align: center;
+            color: var(--dourado);
+        }
+
+        .logo-b {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 48px;
+
+            line-height: 35px;
+
+            font-weight: 600;
+        }
+
+        .logo-nome {
+            display: block;
+
+            margin-top: 10px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 24px;
+
+            letter-spacing: 8px;
+        }
+
+
+        /* ÍCONES */
+
+        .acoes {
+            display: flex;
+            gap: 17px;
+        }
+
+        .acoes button {
+            border: none;
+
+            background: transparent;
+
+            color: #705c56;
+
+            font-size: 21px;
+        }
+
+
+        /* =========================
+           CAPA
+        ========================= */
+
+        .capa {
+
+            min-height: 520px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #fdf0ed,
+                    #fffafa
+                );
+        }
+
+
+        .capa-texto {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+        }
+
+
+        .capa-b {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 85px;
+
+            color: var(--dourado);
+
+            line-height: 70px;
+        }
+
+
+        .capa h1 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 75px;
+
+            letter-spacing: 12px;
+
+            color: #a9772e;
+
+            font-weight: 500;
+        }
+
+
+        .capa p {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 22px;
+
+            letter-spacing: 2px;
+
+            margin: 10px 0 30px;
+        }
+
+
+        .botao {
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            border: 1px solid var(--dourado);
+
+            background: var(--rosa);
+
+            color: #805c45;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            transition: 0.3s;
+        }
+
+
+        .botao:hover {
+
+            background: var(--dourado);
+
+            color: white;
+        }
+
+
+        /* IMAGEM DECORATIVA DA CAPA */
+
+        .capa-imagem {
+
+            min-height: 520px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f7e7e2,
+                    #ffffff
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .capa-imagem::before {
+
+            content: "BELLEZE";
+
+            position: absolute;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 130px;
+
+            color: rgba(183, 138, 61, 0.08);
+
+            transform: rotate(-12deg);
+        }
+
+
+        .capa-imagem::after {
+
+            content: "B";
+
+            position: absolute;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 330px;
+
+            color: rgba(247, 217, 220, 0.65);
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           CATEGORIAS
+        ========================= */
+
+        .categorias {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 55px;
+
+            padding: 40px 20px;
+
+            border-bottom: 1px solid #eee5e1;
+        }
+
+
+        .categoria {
+
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+
+        .categoria-icon {
+
+            width: 65px;
+
+            height: 65px;
+
+            border-radius: 50%;
+
+            background: var(--rosa-claro);
+
+            color: var(--dourado);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin: auto;
+
+            transition: 0.3s;
+        }
+
+
+        .categoria:hover .categoria-icon {
+
+            transform: translateY(-5px);
+
+            background: var(--rosa);
+        }
+
+
+        .categoria p {
+
+            margin-top: 10px;
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           COLEÇÃO
+        ========================= */
+
+        .colecao {
+
+            padding: 70px 4%;
+        }
+
+
+        .titulo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .titulo::before,
+        .titulo::after {
+
+            content: "";
+
+            height: 1px;
+
+            background: var(--dourado-claro);
+
+            flex: 1;
+        }
+
+
+        .titulo h2 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            letter-spacing: 5px;
+
+            color: #72594f;
+        }
+
+
+        /* =========================
+           PRODUTOS
+        ========================= */
+
+        .produtos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 25px 15px;
+        }
+
+
+        .produto {
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+
+        .produto:hover {
+
+            transform: translateY(-5px);
+        }
+
+
+        .produto-imagem {
+
+            width: 100%;
+
+            aspect-ratio: 3 / 4;
+
+            background: #f8f5f3;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        .produto-imagem img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s;
+        }
+
+
+        .produto:hover img {
+
+            transform: scale(1.04);
+        }
+
+
+        .favorito {
+
+            position: absolute;
+
+            top: 12px;
+
+            right: 12px;
+
+            width: 36px;
+
+            height: 36px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: var(--dourado);
+
+            font-size: 20px;
+        }
+
+
+        .produto h3 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 17px;
+
+            margin-top: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .preco {
+
+            margin-top: 6px;
+
+            font-size: 12px;
+
+            color: #705e58;
+        }
+
+
+        .adicionar {
+
+            margin-top: 10px;
+
+            border: none;
+
+            background: var(--rosa);
+
+            color: #815d4d;
+
+            padding: 9px 18px;
+
+            border-radius: 20px;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+
+        .adicionar:hover {
+
+            background: var(--dourado);
+
+            color: white;
+        }
+
+
+        /* =========================
+           SOBRE A BELLEZE
+        ========================= */
+
+        .sobre {
+
+            margin: 20px 4% 60px;
+
+            padding: 60px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #f7d9dc,
+                    #fff3f1
+                );
+        }
+
+
+        .sobre small {
+
+            font-size: 9px;
+
+            letter-spacing: 4px;
+
+            color: #916c5a;
+        }
+
+
+        .sobre h2 {
+
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 40px;
+
+            font-weight: 500;
+
+            margin: 10px 0;
+        }
+
+
+        .sobre p {
+
+            font-size: 12px;
+
+            color: #806e69;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
+        footer {
+
+            background: var(--rosa);
+
+            min-height: 100px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            color: #76584d;
+
+            font-family: "Cormorant Garamond", serif;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 0 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .capa {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .capa-imagem {
+
+                min-height: 250px;
+
+            }
+
+            .capa h1 {
+
+                font-size: 50px;
+
+                letter-spacing: 7px;
+
+            }
+
+            .categorias {
+
+                overflow-x: auto;
+
+                justify-content: flex-start;
+
+            }
+
+            .produtos {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+            .colecao {
+
+                padding: 50px 15px;
+
+            }
+
+            footer {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                padding: 30px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .logo-nome {
+
+                font-size: 18px;
+
+                letter-spacing: 5px;
+
+            }
+
+            .logo-b {
+
+                font-size: 35px;
+
+            }
+
+            .acoes {
+
+                gap: 5px;
+
+            }
+
+            .acoes button {
+
+                font-size: 17px;
+
+            }
+
+            .capa-texto {
+
+                min-height: 360px;
+
+            }
+
+            .capa-b {
+
+                font-size: 65px;
+
+            }
+
+            .capa h1 {
+
+                font-size: 43px;
+
+            }
+
+            .capa p {
+
+                font-size: 18px;
+
+            }
+
+            .titulo h2 {
+
+                font-size: 21px;
+
+                letter-spacing: 3px;
+
+            }
+
+            .produtos {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 25px 10px;
+
+            }
+
+            .produto h3 {
+
+                font-size: 14px;
+
+            }
+
+            .sobre {
+
+                margin: 10px 15px 40px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- BARRA SUPERIOR -->
+
+    <div class="topo">
+
+        ✦ FRETE GRÁTIS PARA TODO O BRASIL ✦
+
+    </div>
+
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <nav>
+
+            <a href="#inicio">
+                INÍCIO
+            </a>
+
+            <a href="#colecao">
+                LOJA
+            </a>
+
+            <a href="#sobre">
+                SOBRE NÓS
+            </a>
+
+        </nav>
+
+
+        <a href="#inicio" class="logo">
+
+            <div class="logo-b">
+                B
+            </div>
+
+            <span class="logo-nome">
+                BELLEZE
+            </span>
+
+        </a>
+
+
+        <div class="acoes">
+
+            <button>
+                ⌕
+            </button>
+
+            <button>
+                ♡
+            </button>
+
+            <button>
+                🛍
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CAPA -->
+
+    <section class="capa" id="inicio">
+
+
+        <div class="capa-texto">
+
+            <div class="capa-b">
+                B
+            </div>
+
+            <h1>
+                BELLEZE
+            </h1>
+
+            <p>
+                Elegância que permanece.
+            </p>
+
+            <a
+                href="#colecao"
+                class="botao"
+            >
+                VER COLEÇÃO →
+            </a>
+
+        </div>
+
+
+        <div class="capa-imagem">
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CATEGORIAS -->
+
+    <section class="categorias">
+
+
+        <a
+            href="#colecao"
+            class="categoria"
+        >
+
+            <div class="categoria-icon">
+                ♢
+            </div>
+
+            <p>
+                CALÇAS
+            </p>
+
+        </a>
+
+
+        <a
+            href="#colecao"
+            class="categoria"
+        >
+
+            <div class="categoria-icon">
+                ♧
+            </div>
+
+            <p>
+                BLUSAS
+            </p>
+
+        </a>
+
+
+        <a
+            href="#colecao"
+            class="categoria"
+        >
+
+            <div class="categoria-icon">
+                ◇
+            </div>
+
+            <p>
+                TRICÔS
+            </p>
+
+        </a>
+
+
+        <a
+            href="#colecao"
+            class="categoria"
+        >
+
+            <div class="categoria-icon">
+                ♢
+            </div>
+
+            <p>
+                JAQUETAS
+            </p>
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- COLEÇÃO -->
+
+    <section
+        class="colecao"
+        id="colecao"
+    >
+
+
+        <div class="titulo">
+
+            <h2>
+                NOSSA COLEÇÃO
+            </h2>
+
+        </div>
+
+
+
+        <div class="produtos">
+
+
+
+            <!-- PRODUTO 1 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/calca-pantalona.jpeg"
+                        alt="Calça pantalona de alfaiataria"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Calça Pantalona Alfaiataria
+                </h3>
+
+                <p class="preco">
+                    R$ 389,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 2 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/colete-alfaiataria.jpeg"
+                        alt="Colete de alfaiataria"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Colete Alfaiataria
+                </h3>
+
+                <p class="preco">
+                    R$ 279,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 3 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/blusa-trico-poncho.jpeg"
+                        alt="Blusa de tricô poncho"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Blusa Tricô Poncho
+                </h3>
+
+                <p class="preco">
+                    R$ 259,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 4 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/blusa-listrada.jpeg"
+                        alt="Blusa listrada com laço"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Blusa Listrada
+                </h3>
+
+                <p class="preco">
+                    R$ 229,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 5 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/trico-urso-rosa.jpeg"
+                        alt="Tricô rosa com urso"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Tricô Urso Rosa
+                </h3>
+
+                <p class="preco">
+                    R$ 249,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 6 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/trico-bandeira.jpeg"
+                        alt="Tricô azul marinho"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Tricô Bandeira
+                </h3>
+
+                <p class="preco">
+                    R$ 249,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 7 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/jeans-wide-leg.jpeg"
+                        alt="Jeans wide leg azul"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Jeans Wide Leg
+                </h3>
+
+                <p class="preco">
+                    R$ 329,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 8 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/jeans-cinza.jpeg"
+                        alt="Jeans wide leg cinza"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Jeans Wide Leg Cinza
+                </h3>
+
+                <p class="preco">
+                    R$ 329,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 9 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/jaqueta-couro.jpeg"
+                        alt="Jaqueta preta de couro"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Jaqueta Couro Premium
+                </h3>
+
+                <p class="preco">
+                    R$ 599,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+
+            <!-- PRODUTO 10 -->
+
+            <article class="produto">
+
+                <div class="produto-imagem">
+
+                    <img
+                        src="imagens/jaqueta-jeans-preta.jpeg"
+                        alt="Jaqueta jeans preta"
+                    >
+
+                    <button class="favorito">
+                        ♡
+                    </button>
+
+                </div>
+
+                <h3>
+                    Jaqueta Jeans Preta
+                </h3>
+
+                <p class="preco">
+                    R$ 349,90
+                </p>
+
+                <button class="adicionar">
+                    ADICIONAR À SACOLA
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SOBRE -->
+
+    <section
+        class="sobre"
+        id="sobre"
+    >
+
+        <small>
+            QUALIDADE • ESTILO • VOCÊ
+        </small>
+
+        <h2>
+            Mais que roupas,<br>
+            é sobre você.
+        </h2>
+
+        <p>
+            A BELLEZE une delicadeza,
+            personalidade e sofisticação
+            em cada escolha.
+        </p>
+
+        <a
+            href="#colecao"
+            class="botao"
+        >
+            CONHEÇA A COLEÇÃO
+        </a>
+
+    </section>
+
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div>
+            ♡ &nbsp; BELLEZE
+        </div>
+
+        <div>
+            Elegância que permanece.
+        </div>
+
+        <div>
+            © 2026 BELLEZE
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
