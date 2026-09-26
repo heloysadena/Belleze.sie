@@ -1,1 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>BELLEZE | Elegância que permanece</title>
+
+    <meta
+        name="description"
+        content="BELLEZE - moda sofisticada, elegante e atemporal."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fffdfc;
+            color: #4d3d3b;
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        :root {
+            --branco: #fffdfc;
+            --rosa: #f7d9dc;
+            --rosa-claro: #fcebed;
+            --dourado: #b78a3d;
+            --dourado-claro: #d8b56d;
+            --texto: #4d3d3b;
+            --cinza: #8d7773;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            background: rgba(255, 253, 252, 0.96);
+            border-bottom: 1px solid rgba(183, 138, 61, 0.18);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            text-decoration: none;
+            color: var(--texto);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-simbolo {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--dourado);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 28px;
+            color: var(--dourado);
+            border-radius: 50%;
+        }
+
+        .logo-texto {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            letter-spacing: 5px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 38px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--texto);
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dourado);
+        }
+
+        .acoes {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .acao {
+            position: relative;
+            border: none;
+            background: transparent;
+            color: var(--texto);
+            font-size: 23px;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .acao:hover {
+            color: var(--dourado);
+            transform: translateY(-2px);
+        }
+
+        .contador-sacola {
+            position: absolute;
+            top: -3px;
+            right: -4px;
+            min-width: 17px;
+            height: 17px;
+            padding: 0 4px;
+            background: var(--dourado);
+            color: white;
+            border-radius: 50px;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 70px 8%;
+            background:
+                radial-gradient(circle at 80% 50%, #fcebed 0%, transparent 38%),
+                #fffdfc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-conteudo {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .mini-titulo {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: var(--dourado);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(65px, 9vw, 130px);
+            line-height: 0.78;
+            font-weight: 500;
+            letter-spacing: -4px;
+            color: var(--texto);
+        }
+
+        .hero h1 span {
+            color: var(--dourado);
+        }
+
+        .hero-subtitulo {
+            margin-top: 32px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 28px;
+            font-style: italic;
+            color: var(--cinza);
+        }
+
+        .hero-texto {
+            max-width: 470px;
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.9;
+            color: var(--cinza);
+        }
+
+        .botao-hero {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 15px 30px;
+            background: var(--texto);
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .botao-hero:hover {
+            background: var(--dourado);
+            transform: translateY(-2px);
+        }
+
+        .hero-decoracao {
+            position: relative;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circulo-grande {
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
+            background: var(--rosa-claro);
+            position: absolute;
+        }
+
+        .circulo-borda {
+            width: 430px;
+            height: 430px;
+            border: 1px solid var(--dourado-claro);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .letra-b {
+            position: relative;
+            z-index: 2;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 300px;
+            font-weight: 500;
+            color: rgba(183, 138, 61, 0.7);
+            line-height: 1;
+        }
+
+        /* =========================
+           CATEGORIAS
+        ========================= */
+
+        .categorias {
+            padding: 85px 7%;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .titulo-secao small {
+            color: var(--dourado);
+            letter-spacing: 4px;
+            font-size: 10px;
+        }
+
+        .titulo-secao h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 47px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .linha-dourada {
+            width: 45px;
+            height: 1px;
+            background: var(--dourado);
+            margin: 15px auto 0;
+        }
+
+        .categorias-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .categoria {
+            height: 230px;
+            background: var(--rosa-claro);
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .categoria:nth-child(2) {
+            background: #f8eeee;
+        }
+
+        .categoria:nth-child(3) {
+            background: #f5e8e9;
+        }
+
+        .categoria:nth-child(4) {
+            background: #f7e0df;
+        }
+
+        .categoria::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid rgba(183, 138, 61, 0.35);
+            top: 30px;
+            right: 25px;
+        }
+
+        .categoria:hover {
+            transform: translateY(-7px);
+        }
+
+        .categoria h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 29px;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* =========================
+           COLEÇÃO
+        ========================= */
+
+        .colecao {
+            padding: 85px 7%;
+            background: #fff;
+        }
+
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 42px 20px;
+        }
+
+        .produto {
+            position: relative;
+        }
+
+        .produto-imagem {
+            position: relative;
+            background: #f8eeee;
+            height: 390px;
+            overflow: hidden;
+        }
+
+        .produto-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .produto:hover .produto-imagem img {
+            transform: scale(1.04);
+        }
+
+        .favorito {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 5;
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255, 255, 255, 0.92);
+            color: var(--texto);
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.25s;
+        }
+
+        .favorito:hover {
+            color: var(--dourado);
+            transform: scale(1.08);
+        }
+
+        .favorito.ativo {
+            color: #b78a3d;
+        }
+
+        .produto-info {
+            padding-top: 17px;
+        }
+
+        .produto-nome {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            color: var(--texto);
+        }
+
+        .produto-preco {
+            margin-top: 7px;
+            color: var(--dourado);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .botao-sacola {
+            margin-top: 14px;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--texto);
+            background: transparent;
+            color: var(--texto);
+            font-size: 10px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao-sacola:hover {
+            background: var(--texto);
+            color: white;
+        }
+
+        .produto-placeholder {
+            height: 390px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #fcebed,
+                    #f7d9dc
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            color: var(--cinza);
+        }
+
+        .produto-placeholder span {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+        }
+
+        .produto-placeholder small {
+            margin-top: 8px;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .sobre {
+            padding: 110px 12%;
+            background: var(--rosa-claro);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 90px;
+            align-items: center;
+        }
+
+        .sobre-imagem {
+            height: 480px;
+            background: #f7d9dc;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sobre-imagem::after {
+            content: "B";
+            font-family: "Cormorant Garamond", serif;
+            font-size: 300px;
+            color: rgba(183, 138, 61, 0.55);
+        }
+
+        .sobre-texto small {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--dourado);
+        }
+
+        .sobre-texto h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 55px;
+            font-weight: 500;
+            line-height: 0.95;
+            margin: 18px 0 25px;
+        }
+
+        .sobre-texto p {
+            color: var(--cinza);
+            font-size: 13px;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #4d3d3b;
+            color: white;
+            padding: 70px 7% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 35px;
+            letter-spacing: 5px;
+        }
+
+        .footer-texto {
+            color: #d8cbc9;
+            font-size: 12px;
+            line-height: 1.8;
+            max-width: 290px;
+            margin-top: 15px;
+        }
+
+        .footer-coluna h4 {
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            color: var(--dourado-claro);
+        }
+
+        .footer-coluna a {
+            display: block;
+            color: #eee5e4;
+            text-decoration: none;
+            font-size: 11px;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-coluna a:hover {
+            color: var(--dourado-claro);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding-top: 25px;
+            color: #c9bcba;
+            font-size: 10px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           MODAIS
+        ========================= */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(38, 28, 27, 0.55);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.aberto {
+            display: flex;
+        }
+
+        .modal-caixa {
+            width: min(560px, 100%);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: var(--branco);
+            padding: 35px;
+            position: relative;
+            box-shadow: 0 20px 70px rgba(0,0,0,0.18);
+        }
+
+        .modal-fechar {
+            position: absolute;
+            top: 13px;
+            right: 16px;
+            border: none;
+            background: transparent;
+            font-size: 27px;
+            cursor: pointer;
+            color: var(--texto);
+            line-height: 1;
+        }
+
+        .modal-titulo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 39px;
+            font-weight: 500;
+            padding-right: 30px;
+        }
+
+        .modal-linha {
+            width: 45px;
+            height: 1px;
+            background: var(--dourado);
+            margin: 13px 0 25px;
+        }
+
+        .lista-favoritos,
+        .lista-sacola {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .favorito-item,
+        .sacola-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #eee4e2;
+            padding-bottom: 14px;
+        }
+
+        .favorito-item img,
+        .sacola-item img {
+            width: 75px;
+            height: 85px;
+            object-fit: cover;
+            background: var(--rosa-claro);
+        }
+
+        .favorito-dados,
+        .sacola-dados {
+            flex: 1;
+        }
+
+        .favorito-dados strong,
+        .sacola-dados strong {
+            display: block;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .favorito-dados span,
+        .sacola-dados span {
+            display: block;
+            margin-top: 5px;
+            color: var(--dourado);
+            font-size: 12px;
+        }
+
+        .remover-favorito,
+        .remover-sacola {
+            border: none;
+            background: transparent;
+            color: var(--cinza);
+            cursor: pointer;
+            font-size: 19px;
+        }
+
+        .remover-favorito:hover,
+        .remover-sacola:hover {
+            color: #9e6d69;
+        }
+
+        .favoritos-vazio,
+        .sacola-vazia {
+            text-align: center;
+            padding: 35px 10px;
+            color: var(--cinza);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           CONTROLES DA SACOLA
+        ========================= */
+
+        .sacola-controles {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 9px;
+        }
+
+        .quantidade-btn {
+            width: 27px;
+            height: 27px;
+            border: 1px solid #d9ccca;
+            background: white;
+            cursor: pointer;
+            color: var(--texto);
+            transition: 0.2s;
+        }
+
+        .quantidade-btn:hover {
+            border-color: var(--dourado);
+            color: var(--dourado);
+        }
+
+        .quantidade {
+            min-width: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .sacola-resumo {
+            margin-top: 25px;
+            border-top: 1px solid #e8dcda;
+            padding-top: 20px;
+        }
+
+        .sacola-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .sacola-total strong {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 27px;
+            color: var(--dourado);
+        }
+
+        .finalizar-compra {
+            width: 100%;
+            margin-top: 18px;
+            padding: 15px;
+            border: none;
+            background: var(--texto);
+            color: white;
+            cursor: pointer;
+            letter-spacing: 2px;
+            font-size: 10px;
+            transition: 0.3s;
+        }
+
+        .finalizar-compra:hover {
+            background: var(--dourado);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 1000px) {
+            nav {
+                gap: 18px;
+            }
+
+            .categorias-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .produtos-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sobre {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 750px) {
+            header {
+                height: 75px;
+                padding: 0 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .logo-texto {
+                font-size: 23px;
+            }
+
+            .logo-simbolo {
+                width: 34px;
+                height: 34px;
+                font-size: 24px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 70px 7%;
+                min-height: auto;
+            }
+
+            .hero-decoracao {
+                height: 360px;
+                margin-top: 30px;
+            }
+
+            .circulo-grande {
+                width: 280px;
+                height: 280px;
+            }
+
+            .circulo-borda {
+                width: 310px;
+                height: 310px;
+            }
+
+            .letra-b {
+                font-size: 220px;
+            }
+
+            .categorias,
+            .colecao {
+                padding: 65px 5%;
+            }
+
+            .categorias-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+
+            .categoria {
+                height: 180px;
+                padding: 17px;
+            }
+
+            .categoria h3 {
+                font-size: 23px;
+            }
+
+            .produtos-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 12px;
+            }
+
+            .produto-imagem,
+            .produto-placeholder {
+                height: 280px;
+            }
+
+            .produto-nome {
+                font-size: 20px;
+            }
+
+            .sobre {
+                padding: 75px 7%;
+                gap: 45px;
+            }
+
+            .sobre-imagem {
+                height: 330px;
+            }
+
+            .sobre-texto h2 {
+                font-size: 45px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px 20px;
+            }
+
+            .modal-caixa {
+                padding: 27px 20px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .acoes {
+                gap: 8px;
+            }
+
+            .acao {
+                width: 31px;
+                height: 31px;
+                font-size: 20px;
+            }
+
+            .categorias-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .produtos-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .produto-imagem,
+            .produto-placeholder {
+                height: 240px;
+            }
+
+            .produto-nome {
+                font-size: 18px;
+            }
+
+            .botao-sacola {
+                font-size: 8px;
+                letter-spacing: 1px;
+                padding: 11px 5px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-titulo {
+                font-size: 33px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a href="#inicio" class="logo">
+            <div class="logo-simbolo">B</div>
+            <div class="logo-texto">BELLEZE</div>
+        </a>
+
+        <nav>
+            <a href="#inicio">INÍCIO</a>
+            <a href="#loja">LOJA</a>
+            <a href="#sobre">SOBRE NÓS</a>
+        </nav>
+
+        <div class="acoes">
+
+            <button
+                type="button"
+                class="acao"
+                aria-label="Pesquisar"
+                onclick="abrirPesquisa()"
+            >
+                ⌕
+            </button>
+
+            <button
+                type="button"
+                class="acao"
+                id="abrir-favoritos"
+                aria-label="Favoritos"
+            >
+                ♡
+            </button>
+
+            <button
+                type="button"
+                class="acao"
+                id="abrir-sacola"
+                aria-label="Sacola"
+            >
+                🛍
+                <span id="contador-sacola" class="contador-sacola">0</span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-conteudo">
+
+            <div class="mini-titulo
