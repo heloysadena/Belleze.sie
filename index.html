@@ -1,1 +1,2356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>BELLEZE | Elegância que permanece</title>
+
+    <meta
+        name="description"
+        content="BELLEZE - moda sofisticada, elegante e atemporal."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --branco: #fffdfc;
+            --rosa: #f7d9dc;
+            --rosa-claro: #fcebed;
+            --dourado: #b78a3d;
+            --dourado-claro: #d8b56d;
+            --texto: #4d3d3b;
+            --cinza: #8d7773;
+            --preto: #2f2524;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--branco);
+            color: var(--texto);
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            padding: 22px 6%;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            border-bottom: 1px solid #eee3e1;
+            background: rgba(255, 253, 252, 0.96);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-left a {
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-left a:hover {
+            color: var(--dourado);
+        }
+
+        .logo {
+            text-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 38px;
+            letter-spacing: 6px;
+            color: var(--dourado);
+            font-weight: 600;
+        }
+
+        .logo span {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            color: var(--cinza);
+            margin-top: -4px;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .header-btn {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #eadedc;
+            background: white;
+            color: var(--texto);
+            border-radius: 50%;
+            font-size: 18px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .header-btn:hover {
+            background: var(--rosa-claro);
+            border-color: var(--rosa);
+        }
+
+        .bag-count {
+            position: absolute;
+            right: -3px;
+            top: -3px;
+            background: var(--dourado);
+            color: white;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            font-size: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+            padding: 90px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            background:
+                radial-gradient(circle at 85% 30%, #f9e1e4 0, transparent 30%),
+                linear-gradient(120deg, #fffdfc, #fff7f7);
+        }
+
+        .hero-text {
+            max-width: 620px;
+        }
+
+        .hero-small {
+            color: var(--dourado);
+            font-size: 11px;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(60px, 8vw, 110px);
+            font-weight: 500;
+            line-height: 0.82;
+            letter-spacing: 4px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: var(--dourado);
+        }
+
+        .hero p {
+            max-width: 450px;
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--cinza);
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            padding: 16px 28px;
+            background: var(--preto);
+            color: white;
+            font-size: 10px;
+            letter-spacing: 2px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: var(--dourado);
+            transform: translateY(-2px);
+        }
+
+        .hero-art {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-circle {
+            width: 410px;
+            height: 410px;
+            border-radius: 50%;
+            background: var(--rosa);
+            position: absolute;
+        }
+
+        .hero-letter {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 280px;
+            color: white;
+            line-height: 1;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 10px 30px rgba(183, 138, 61, 0.12);
+        }
+
+        .hero-gold {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid var(--dourado-claro);
+            border-radius: 50%;
+            transform: rotate(25deg);
+        }
+
+        /* =========================
+           CATEGORIAS
+        ========================= */
+
+        .categories {
+            padding: 85px 6%;
+            text-align: center;
+        }
+
+        .section-label {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--dourado);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 52px;
+            font-weight: 500;
+            margin-bottom: 45px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            min-height: 230px;
+            background: var(--rosa-claro);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .category:nth-child(even) {
+            background: #f8f2ef;
+        }
+
+        .category:hover {
+            transform: translateY(-6px);
+        }
+
+        .category h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+
+        .category::before {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.45);
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* =========================
+           COLEÇÃO
+        ========================= */
+
+        .collection {
+            padding: 85px 6%;
+            background: #fff9f8;
+        }
+
+        .collection-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            margin-bottom: 45px;
+        }
+
+        .collection-header .section-title {
+            margin-bottom: 0;
+        }
+
+        .collection-header p {
+            max-width: 360px;
+            font-size: 12px;
+            color: var(--cinza);
+            line-height: 1.8;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .product {
+            position: relative;
+        }
+
+        .product-image {
+            height: 390px;
+            background: #f4ecea;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .product:hover .product-image img {
+            transform: scale(1.04);
+        }
+
+        .favorite-btn {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.92);
+            font-size: 20px;
+            z-index: 3;
+        }
+
+        .favorite-btn.active {
+            color: #b78a3d;
+        }
+
+        .product-info {
+            padding: 17px 2px 0;
+        }
+
+        .product-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            margin-bottom: 7px;
+        }
+
+        .product-price {
+            color: var(--dourado);
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddceca;
+            background: white;
+            color: var(--texto);
+            font-size: 9px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .add-btn:hover {
+            background: var(--preto);
+            color: white;
+            border-color: var(--preto);
+        }
+
+        .placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: var(--cinza);
+        }
+
+        .placeholder strong {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            color: var(--dourado);
+            margin-bottom: 8px;
+        }
+
+        .placeholder span {
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about {
+            padding: 100px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: var(--rosa-claro);
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-b {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 260px;
+            color: white;
+            line-height: 1;
+        }
+
+        .about-text h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 58px;
+            font-weight: 500;
+            line-height: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .about-text h2 span {
+            color: var(--dourado);
+        }
+
+        .about-text p {
+            font-size: 13px;
+            line-height: 2;
+            color: var(--cinza);
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--preto);
+            color: white;
+            padding: 70px 6% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--dourado-claro);
+            font-size: 43px;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column h4 {
+            font-size: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: var(--dourado-claro);
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 11px;
+            line-height: 2.1;
+            color: #d6ccca;
+            display: block;
+        }
+
+        .footer-bottom {
+            padding-top: 25px;
+            text-align: center;
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #9e9290;
+        }
+
+        /* =========================
+           MODAIS
+        ========================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(40, 30, 29, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: min(700px, 100%);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: white;
+            padding: 35px;
+            position: relative;
+            animation: aparecer 0.25s ease;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            border: none;
+            background: none;
+            font-size: 25px;
+            color: var(--texto);
+        }
+
+        .modal-title {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .empty {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--cinza);
+            font-size: 13px;
+        }
+
+        /* =========================
+           FAVORITOS
+        ========================= */
+
+        .favorite-item {
+            display: grid;
+            grid-template-columns: 90px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee5e3;
+        }
+
+        .favorite-item img {
+            width: 90px;
+            height: 100px;
+            object-fit: cover;
+            background: #f4ecea;
+        }
+
+        .favorite-item h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .favorite-item p {
+            font-size: 12px;
+            color: var(--dourado);
+            margin-top: 5px;
+        }
+
+        .remove-favorite {
+            border: none;
+            background: none;
+            color: #999;
+            font-size: 12px;
+        }
+
+        /* =========================
+           SACOLA
+        ========================= */
+
+        .bag-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 16px;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #eee5e3;
+        }
+
+        .bag-item img {
+            width: 80px;
+            height: 90px;
+            object-fit: cover;
+            background: #f4ecea;
+        }
+
+        .bag-item h4 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 21px;
+            font-weight: 500;
+        }
+
+        .bag-price {
+            font-size: 12px;
+            color: var(--dourado);
+            margin-top: 4px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .quantity button {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+
+        .remove-bag {
+            border: none;
+            background: none;
+            color: #999;
+            font-size: 11px;
+        }
+
+        .bag-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        .bag-total strong {
+            color: var(--dourado);
+            font-size: 18px;
+        }
+
+        .checkout {
+            width: 100%;
+            margin-top: 20px;
+            padding: 15px;
+            border: none;
+            background: var(--preto);
+            color: white;
+            letter-spacing: 2px;
+            font-size: 10px;
+        }
+
+        .checkout:hover {
+            background: var(--dourado);
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 1000px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                margin: auto;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                grid-template-columns: 1fr auto;
+            }
+
+            .nav-left {
+                display: none;
+            }
+
+            .logo {
+                text-align: left;
+                font-size: 31px;
+            }
+
+            .header-actions {
+                gap: 5px;
+            }
+
+            .header-btn {
+                width: 37px;
+                height: 37px;
+            }
+
+            .hero {
+                min-height: 650px;
+                padding: 70px 7%;
+            }
+
+            .hero-circle {
+                width: 290px;
+                height: 290px;
+            }
+
+            .hero-gold {
+                width: 320px;
+                height: 320px;
+            }
+
+            .hero-letter {
+                font-size: 200px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .category-grid,
+            .products {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .product-image {
+                height: 250px;
+            }
+
+            .product-name {
+                font-size: 19px;
+            }
+
+            .collection-header {
+                display: block;
+            }
+
+            .collection-header p {
+                margin-top: 15px;
+            }
+
+            .about {
+                padding: 70px 7%;
+                gap: 40px;
+            }
+
+            .about-box {
+                min-height: 300px;
+            }
+
+            .about-b {
+                font-size: 190px;
+            }
+
+            .about-text h2 {
+                font-size: 45px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 25px 18px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .category {
+                min-height: 180px;
+                padding: 18px;
+            }
+
+            .category h3 {
+                font-size: 25px;
+            }
+
+            .product-image {
+                height: 220px;
+            }
+
+            .favorite-item {
+                grid-template-columns: 65px 1fr;
+            }
+
+            .favorite-item img {
+                width: 65px;
+                height: 75px;
+            }
+
+            .remove-favorite {
+                grid-column: 2;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <nav class="nav-left">
+            <a href="#inicio">INÍCIO</a>
+            <a href="#loja">LOJA</a>
+            <a href="#sobre">SOBRE NÓS</a>
+        </nav>
+
+        <a href="#inicio" class="logo">
+            BELLEZE
+            <span>ELEGÂNCIA QUE PERMANECE</span>
+        </a>
+
+        <div class="header-actions">
+            <button class="header-btn" id="buscar" aria-label="Buscar">
+                ⌕
+            </button>
+
+            <button class="header-btn" id="abrir-favoritos" aria-label="Favoritos">
+                ♡
+            </button>
+
+            <button class="header-btn" id="abrir-sacola" aria-label="Sacola">
+                🛍
+                <span class="bag-count" id="bag-count">0</span>
+            </button>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <div class="hero-small">
+                    NOVA COLEÇÃO · 2026
+                </div>
+
+                <h1>
+                    Elegância<br>
+                    que <span>permanece.</span>
+                </h1>
+
+                <p>
+                    Peças escolhidas para mulheres que valorizam
+                    sofisticação, delicadeza e personalidade.
+                    Descubra uma moda que atravessa tendências.
+                </p>
+
+                <a href="#loja" class="hero-button">
+                    VER COLEÇÃO →
+                </a>
+
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-circle"></div>
+                <div class="hero-gold"></div>
+                <div class="hero-letter">B</div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CATEGORIAS
+        ========================== -->
+
+        <section class="categories">
+
+            <div class="section-label">
+                EXPLORE
+            </div>
+
+            <h2 class="section-title">
+                Encontre seu estilo
+            </h2>
+
+            <div class="category-grid">
+
+                <a href="#loja" class="category">
+                    <h3>Calças</h3>
+                </a>
+
+                <a href="#loja" class="category">
+                    <h3>Blusas</h3>
+                </a>
+
+                <a href="#loja" class="category">
+                    <h3>Tricôs</h3>
+                </a>
+
+                <a href="#loja" class="category">
+                    <h3>Jaquetas</h3>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LOJA
+        ========================== -->
+
+        <section class="collection" id="loja">
+
+            <div class="collection-header">
+
+                <div>
+                    <div class="section-label">
+                        BELLEZE
+                    </div>
+
+                    <h2 class="section-title">
+                        Nossa coleção
+                    </h2>
+                </div>
+
+                <p>
+                    Selecionamos peças que unem conforto,
+                    qualidade e uma estética sofisticada.
+                </p>
+
+            </div>
+
+
+            <div class="products">
+
+
+                <!-- PRODUTO 1 -->
+
+                <article
+                    class="product"
+                    data-id="1"
+                    data-name="Calça Pantalona Alfaiataria"
+                    data-price="389.90"
+                    data-image="83D4B564-BDA1-4008-84AD-0DE93391942F.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="83D4B564-BDA1-4008-84AD-0DE93391942F.png"
+                            alt="Calça Pantalona Alfaiataria"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Calça Pantalona Alfaiataria
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 389,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 2 -->
+
+                <article
+                    class="product"
+                    data-id="2"
+                    data-name="Colete Alfaiataria"
+                    data-price="279.90"
+                    data-image="3B9E5BBB-CFC5-4409-B10E-B6A1F680852E.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="3B9E5BBB-CFC5-4409-B10E-B6A1F680852E.png"
+                            alt="Colete Alfaiataria"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Colete Alfaiataria
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 279,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 3 -->
+
+                <article
+                    class="product"
+                    data-id="3"
+                    data-name="Tricô Polo Ralph Lauren"
+                    data-price="259.90"
+                    data-image="351ECF62-884A-4406-B05D-E95DA2F97E16.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="351ECF62-884A-4406-B05D-E95DA2F97E16.png"
+                            alt="Tricô Polo Ralph Lauren"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Tricô Polo Ralph Lauren
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 259,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 4 -->
+
+                <article
+                    class="product"
+                    data-id="4"
+                    data-name="Moletom Rosa Polo Ralph Lauren"
+                    data-price="249.90"
+                    data-image="E2C18889-F7F9-46F5-BCD2-17178D5C151A.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="E2C18889-F7F9-46F5-BCD2-17178D5C151A.png"
+                            alt="Moletom Rosa Polo Ralph Lauren"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Moletom Rosa Polo Ralph Lauren
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 249,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 5 -->
+
+                <article
+                    class="product"
+                    data-id="5"
+                    data-name="Jeans Wide Leg Cinza"
+                    data-price="329.90"
+                    data-image="FC073A97-0A5B-4C83-BFDB-D137A97CAC43.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="FC073A97-0A5B-4C83-BFDB-D137A97CAC43.png"
+                            alt="Jeans Wide Leg Cinza"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Jeans Wide Leg Cinza
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 329,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 6 -->
+
+                <article
+                    class="product"
+                    data-id="6"
+                    data-name="Jaqueta Jeans Preta"
+                    data-price="349.90"
+                    data-image="3EE997D3-9A1D-48F2-8F19-C5FD63DFE82D.png"
+                >
+
+                    <div class="product-image">
+
+                        <img
+                            src="3EE997D3-9A1D-48F2-8F19-C5FD63DFE82D.png"
+                            alt="Jaqueta Jeans Preta"
+                        >
+
+                        <button
+                            class="favorite-btn"
+                            aria-label="Adicionar aos favoritos"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Jaqueta Jeans Preta
+                        </h3>
+
+                        <div class="product-price">
+                            R$ 349,90
+                        </div>
+
+                        <button class="add-btn">
+                            ADICIONAR À SACOLA
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 7 -->
+
+                <article class="product">
+
+                    <div class="product-image placeholder">
+                        <strong>B</strong>
+                        <span>NOVA PEÇA</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Nova peça
+                        </h3>
+
+                        <div class="product-price">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 8 -->
+
+                <article class="product">
+
+                    <div class="product-image placeholder">
+                        <strong>B</strong>
+                        <span>NOVA PEÇA</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Nova peça
+                        </h3>
+
+                        <div class="product-price">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 9 -->
+
+                <article class="product">
+
+                    <div class="product-image placeholder">
+                        <strong>B</strong>
+                        <span>NOVA PEÇA</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Nova peça
+                        </h3>
+
+                        <div class="product-price">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 10 -->
+
+                <article class="product">
+
+                    <div class="product-image placeholder">
+                        <strong>B</strong>
+                        <span>NOVA PEÇA</span>
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3 class="product-name">
+                            Nova peça
+                        </h3>
+
+                        <div class="product-price">
+                            Em breve
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section class="about" id="sobre">
+
+            <div class="about-box">
+                <div class="about-b">B</div>
+            </div>
+
+            <div class="about-text">
+
+                <div class="section-label">
+                    SOBRE A BELLEZE
+                </div>
+
+                <h2>
+                    Elegância<br>
+                    <span>sem esforço.</span>
+                </h2>
+
+                <p>
+                    A BELLEZE nasceu para valorizar a beleza
+                    da simplicidade e transformar roupas em
+                    expressão de personalidade.
+                </p>
+
+                <p>
+                    Cada peça é escolhida pensando em mulheres
+                    que gostam de se vestir bem sem abrir mão
+                    da autenticidade.
+                </p>
+
+                <p>
+                    Nosso estilo combina delicadeza,
+                    sofisticação e peças atemporais.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="footer-logo">
+                    BELLEZE
+                </div>
+
+                <p>
+                    Elegância que permanece.
+                </p>
+            </div>
+
+            <div class="footer-column">
+
+                <h4>NAVEGAÇÃO</h4>
+
+                <a href="#inicio">Início</a>
+                <a href="#loja">Loja</a>
+                <a href="#sobre">Sobre nós</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>CATEGORIAS</h4>
+
+                <a href="#loja">Calças</a>
+                <a href="#loja">Blusas</a>
+                <a href="#loja">Tricôs</a>
+                <a href="#loja">Jaquetas</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>CONTATO</h4>
+
+                <p>Instagram</p>
+                <p>WhatsApp</p>
+                <p>Atendimento</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 BELLEZE · TODOS OS DIREITOS RESERVADOS
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         MODAL FAVORITOS
+    ========================== -->
+
+    <div class="modal" id="modal-favoritos">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="fechar-favoritos">
+                ×
+            </button>
+
+            <h2 class="modal-title">
+                Meus favoritos
+            </h2>
+
+            <div id="lista-favoritos"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL SACOLA
+    ========================== -->
+
+    <div class="modal" id="modal-sacola">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="fechar-sacola">
+                ×
+            </button>
+
+            <h2 class="modal-title">
+                Minha sacola
+            </h2>
+
+            <div id="lista-sacola"></div>
+
+            <div class="bag-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total-sacola">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <button class="checkout" id="finalizar">
+                FINALIZAR COMPRA
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           DADOS DOS PRODUTOS
+        ========================== */
+
+        const produtos = [
+
+            {
+                id: "1",
+                nome: "Calça Pantalona Alfaiataria",
+                preco: 389.90,
+                imagem: "83D4B564-BDA1-4008-84AD-0DE93391942F.png"
+            },
+
+            {
+                id: "2",
+                nome: "Colete Alfaiataria",
+                preco: 279.90,
+                imagem: "3B9E5BBB-CFC5-4409-B10E-B6A1F680852E.png"
+            },
+
+            {
+                id: "3",
+                nome: "Tricô Polo Ralph Lauren",
+                preco: 259.90,
+                imagem: "351ECF62-884A-4406-B05D-E95DA2F97E16.png"
+            },
+
+            {
+                id: "4",
+                nome: "Moletom Rosa Polo Ralph Lauren",
+                preco: 249.90,
+                imagem: "E2C18889-F7F9-46F5-BCD2-17178D5C151A.png"
+            },
+
+            {
+                id: "5",
+                nome: "Jeans Wide Leg Cinza",
+                preco: 329.90,
+                imagem: "FC073A97-0A5B-4C83-BFDB-D137A97CAC43.png"
+            },
+
+            {
+                id: "6",
+                nome: "Jaqueta Jeans Preta",
+                preco: 349.90,
+                imagem: "3EE997D3-9A1D-48F2-8F19-C5FD63DFE82D.png"
+            }
+
+        ];
+
+
+        /* =========================
+           LOCAL STORAGE
+        ========================== */
+
+        function carregarDados(chave) {
+
+            try {
+
+                const dados = localStorage.getItem(chave);
+
+                return dados
+                    ? JSON.parse(dados)
+                    : [];
+
+            } catch (erro) {
+
+                return [];
+
+            }
+
+        }
+
+
+        let favoritos = carregarDados("bellezeFavoritos");
+        let sacola = carregarDados("bellezeSacola");
+
+
+        function salvarDados() {
+
+            localStorage.setItem(
+                "bellezeFavoritos",
+                JSON.stringify(favoritos)
+            );
+
+            localStorage.setItem(
+                "bellezeSacola",
+                JSON.stringify(sacola)
+            );
+
+        }
+
+
+        /* =========================
+           FORMATAÇÃO DE PREÇO
+        ========================== */
+
+        function formatarPreco(valor) {
+
+            return valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+
+        }
+
+
+        /* =========================
+           FAVORITOS
+        ========================== */
+
+        function atualizarBotoesFavoritos() {
+
+            document
+                .querySelectorAll(".product")
+                .forEach(produto => {
+
+                    const id = produto.dataset.id;
+
+                    if (!id) return;
+
+                    const botao =
+                        produto.querySelector(".favorite-btn");
+
+                    if (!botao) return;
+
+                    const existe =
+                        favoritos.some(item => item.id === id);
+
+                    botao.classList.toggle(
+                        "active",
+                        existe
+                    );
+
+                    botao.textContent =
+                        existe ? "♥" : "♡";
+
+                });
+
+        }
+
+
+        document
+            .querySelectorAll(".favorite-btn")
+            .forEach(botao => {
+
+                botao.addEventListener("click", () => {
+
+                    const produto =
+                        botao.closest(".product");
+
+                    const id =
+                        produto.dataset.id;
+
+                    const item =
+                        produtos.find(
+                            produto => produto.id === id
+                        );
+
+                    if (!item) return;
+
+                    const existe =
+                        favoritos.some(
+                            produto => produto.id === id
+                        );
+
+                    if (existe) {
+
+                        favoritos =
+                            favoritos.filter(
+                                produto => produto.id !== id
+                            );
+
+                    } else {
+
+                        favoritos.push(item);
+
+                    }
+
+                    salvarDados();
+                    atualizarBotoesFavoritos();
+
+                    renderizarFavoritos();
+
+                });
+
+            });
+
+
+        function renderizarFavoritos() {
+
+            const lista =
+                document.getElementById("lista-favoritos");
+
+            if (!favoritos.length) {
+
+                lista.innerHTML = `
+                    <div class="empty">
+                        Você ainda não adicionou nenhuma peça aos favoritos. ♡
+                    </div>
+                `;
+
+                return;
+
+            }
+
+            lista.innerHTML =
+                favoritos.map(item => `
+
+                    <div class="favorite-item">
+
+                        <img
+                            src="${item.imagem}"
+                            alt="${item.nome}"
+                        >
+
+                        <div>
+
+                            <h4>
+                                ${item.nome}
+                            </h4>
+
+                            <p>
+                                ${formatarPreco(item.preco)}
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="remove-favorite"
+                            data-id="${item.id}"
+                        >
+                            REMOVER
+                        </button>
+
+                    </div>
+
+                `).join("");
+
+
+            document
+                .querySelectorAll(".remove-favorite")
+                .forEach(botao => {
+
+                    botao.addEventListener(
+                        "click",
+                        () => {
+
+                            const id =
+                                botao.dataset.id;
+
+                            favoritos =
+                                favoritos.filter(
+                                    item => item.id !== id
+                                );
+
+                            salvarDados();
+
+                            atualizarBotoesFavoritos();
+
+                            renderizarFavoritos();
+
+                        }
+                    );
+
+                });
+
+        }
+
+
+        /* =========================
+           SACOLA
+        ========================== */
+
+        function atualizarContadorSacola() {
+
+            const quantidade =
+                sacola.reduce(
+                    (total, item) =>
+                        total + item.quantidade,
+                    0
+                );
+
+            document.getElementById(
+                "bag-count"
+            ).textContent = quantidade;
+
+        }
+
+
+        document
+            .querySelectorAll(".add-btn")
+            .forEach(botao => {
+
+                botao.addEventListener("click", () => {
+
+                    const produto =
+                        botao.closest(".product");
+
+                    const id =
+                        produto.dataset.id;
+
+                    const item =
+                        produtos.find(
+                            produto => produto.id === id
+                        );
+
+                    if (!item) return;
+
+                    const existente =
+                        sacola.find(
+                            produto => produto.id === id
+                        );
+
+                    if (existente) {
+
+                        existente.quantidade++;
+
+                    } else {
+
+                        sacola.push({
+                            ...item,
+                            quantidade: 1
+                        });
+
+                    }
+
+                    salvarDados();
+
+                    atualizarContadorSacola();
+
+                    renderizarSacola();
+
+                    botao.textContent =
+                        "ADICIONADO ✓";
+
+                    setTimeout(() => {
+
+                        botao.textContent =
+                            "ADICIONAR À SACOLA";
+
+                    }, 1200);
+
+                });
+
+            });
+
+
+        function renderizarSacola() {
+
+            const lista =
+                document.getElementById("lista-sacola");
+
+            if (!sacola.length) {
+
+                lista.innerHTML = `
+                    <div class="empty">
+                        Sua sacola está vazia. 🛍
+                    </div>
+                `;
+
+                document.getElementById(
+                    "total-sacola"
+                ).textContent = "R$ 0,00";
+
+                return;
+
+            }
+
+
+            lista.innerHTML =
+                sacola.map(item => `
+
+                    <div class="bag-item">
+
+                        <img
+                            src="${item.imagem}"
+                            alt="${item.nome}"
+                        >
+
+                        <div>
+
+                            <h4>
+                                ${item.nome}
+                            </h4>
+
+                            <div class="bag-price">
+                                ${formatarPreco(item.preco)}
+                            </div>
+
+                            <div class="quantity">
+
+                                <button
+                                    class="menos"
+                                    data-id="${item.id}"
+                                >
+                                    −
+                                </button>
+
+                                <span>
+                                    ${item.quantidade}
+                                </span>
+
+                                <button
+                                    class="mais"
+                                    data-id="${item.id}"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="remove-bag"
+                            data-id="${item.id}"
+                        >
+                            REMOVER
+                        </button>
+
+                    </div>
+
+                `).join("");
+
+
+            const total =
+                sacola.reduce(
+                    (soma, item) =>
+                        soma +
+                        item.preco *
+                        item.quantidade,
+                    0
+                );
+
+
+            document.getElementById(
+                "total-sacola"
+            ).textContent =
+                formatarPreco(total);
+
+
+            document
+                .querySelectorAll(".mais")
+                .forEach(botao => {
+
+                    botao.addEventListener(
+                        "click",
+                        () => {
+
+                            const item =
+                                sacola.find(
+                                    item =>
+                                        item.id ===
+                                        botao.dataset.id
+                                );
+
+                            if (!item) return;
+
+                            item.quantidade++;
+
+                            salvarDados();
+
+                            atualizarContadorSacola();
+
+                            renderizarSacola();
+
+                        }
+                    );
+
+                });
+
+
+            document
+                .querySelectorAll(".menos")
+                .forEach(botao => {
+
+                    botao.addEventListener(
+                        "click",
+                        () => {
+
+                            const item =
+                                sacola.find(
+                                    item =>
+                                        item.id ===
+                                        botao.dataset.id
+                                );
+
+                            if (!item) return;
+
+                            item.quantidade--;
+
+                            if (item.quantidade <= 0) {
+
+                                sacola =
+                                    sacola.filter(
+                                        produto =>
+                                            produto.id !==
+                                            item.id
+                                    );
+
+                            }
+
+                            salvarDados();
+
+                            atualizarContadorSacola();
+
+                            renderizarSacola();
+
+                        }
+                    );
+
+                });
+
+
+            document
+                .querySelectorAll(".remove-bag")
+                .forEach(botao => {
+
+                    botao.addEventListener(
+                        "click",
+                        () => {
+
+                            const id =
+                                botao.dataset.id;
+
+                            sacola =
+                                sacola.filter(
+                                    item =>
+                                        item.id !== id
+                                );
+
+                            salvarDados();
+
+                            atualizarContadorSacola();
+
+                            renderizarSacola();
+
+                        }
+                    );
+
+                });
+
+        }
+
+
+        /* =========================
+           MODAL FAVORITOS
+        ========================== */
+
+        const modalFavoritos =
+            document.getElementById(
+                "modal-favoritos"
+            );
+
+
+        document
+            .getElementById("abrir-favoritos")
+            .addEventListener(
+                "click",
+                () => {
+
+                    renderizarFavoritos();
+
+                    modalFavoritos.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+
+        document
+            .getElementById("fechar-favoritos")
+            .addEventListener(
+                "click",
+                () => {
+
+                    modalFavoritos.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+        /* =========================
+           MODAL SACOLA
+        ========================== */
+
+        const modalSacola =
+            document.getElementById(
+                "modal-sacola"
+            );
+
+
+        document
+            .getElementById("abrir-sacola")
+            .addEventListener(
+                "click",
+                () => {
+
+                    renderizarSacola();
+
+                    modalSacola.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+
+        document
+            .getElementById("fechar-sacola")
+            .addEventListener(
+                "click",
+                () => {
+
+                    modalSacola.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+        /* =========================
+           FECHAR CLICANDO FORA
+        ========================== */
+
+        document
+            .querySelectorAll(".modal")
+            .forEach(modal => {
+
+                modal.addEventListener(
+                    "click",
+                    evento => {
+
+                        if (
+                            evento.target ===
+                            modal
+                        ) {
+
+                            modal.classList.remove(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+        /* =========================
+           ESC
+        ========================== */
+
+        document.addEventListener(
+            "keydown",
+            evento => {
+
+                if (evento.key === "Escape") {
+
+                    document
+                        .querySelectorAll(".modal")
+                        .forEach(modal => {
+
+                            modal.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           BUSCA
+        ========================== */
+
+        document
+            .getElementById("buscar")
+            .addEventListener(
+                "click",
+                () => {
+
+                    const busca =
+                        prompt(
+                            "O que você está procurando na BELLEZE?"
+                        );
+
+                    if (!busca) return;
+
+                    const termo =
+                        busca.toLowerCase();
+
+                    const produtoEncontrado =
+                        produtos.find(
+                            produto =>
+                                produto.nome
+                                    .toLowerCase()
+                                    .includes(termo)
+                        );
+
+                    if (produtoEncontrado) {
+
+                        const elemento =
+                            document.querySelector(
+                                `[data-id="${produtoEncontrado.id}"]`
+                            );
+
+                        if (elemento) {
+
+                            elemento.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center"
+                            });
+
+                        }
+
+                    } else {
+
+                        alert(
+                            "Não encontramos essa peça na coleção atual."
+                        );
+
+                    }
+
+                }
+            );
+
+
+        /* =========================
+           FINALIZAR COMPRA
+        ========================== */
+
+        document
+            .getElementById("finalizar")
+            .addEventListener(
+                "click",
+                () => {
+
+                    if (!sacola.length) {
+
+                        alert(
+                            "Sua sacola está vazia."
+                        );
+
+                        return;
+
+                    }
+
+                    alert(
+                        "Compra demonstrativa da BELLEZE. O checkout real será adicionado posteriormente. ✨"
+                    );
+
+                }
+            );
+
+
+        /* =========================
+           INICIALIZAÇÃO
+        ========================== */
+
+        atualizarBotoesFavoritos();
+
+        atualizarContadorSacola();
+
+        renderizarFavoritos();
+
+        renderizarSacola();
+
+    </script>
+
+</body>
+</html>
